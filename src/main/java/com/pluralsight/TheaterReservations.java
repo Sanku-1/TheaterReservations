@@ -15,6 +15,6 @@ public class TheaterReservations {
         int ticketInput = reservationScanner.nextInt();
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate movieDate = LocalDate.parse(dateInput, dateFormatter);
-        System.out.println(movieDate);
+        System.out.println(ticketInput + " movie ticket(s) reserved for " + nameInput + " on " + movieDate);
     }
 }
