@@ -9,6 +9,10 @@ public class TheaterReservations {
         Scanner reservationScanner = new Scanner(System.in);
         System.out.println("Please enter your full name:");
         String nameInput = reservationScanner.nextLine();
+        int indexName = nameInput.indexOf(" ");
+        String firstName = nameInput.substring(0, indexName);
+        String lastName = nameInput.substring(indexName);
+        lastName = lastName.trim();
         System.out.println("Please enter the day you would like to watch the movie (MM/dd/yyyy):");
         String dateInput = reservationScanner.nextLine();
         System.out.println("Please enter the number of tickets you would like to purchase:");
@@ -17,9 +21,9 @@ public class TheaterReservations {
         LocalDate movieDate = LocalDate.parse(dateInput, dateFormatter);
 
         if (ticketInput > 1) {
-            System.out.println(ticketInput + " movie tickets reserved under " + nameInput + " for " + movieDate);
+            System.out.println(ticketInput + " tickets reserved for " + movieDate + " under " + lastName + ", " + firstName);
         } else if (ticketInput == 1) {
-            System.out.println(ticketInput + " movie ticket reserved under " + nameInput + " for " + movieDate);
+            System.out.println(ticketInput + " ticket reserved for " + movieDate + " under " + lastName + ", " + firstName);
         } else {
             System.out.println("Invalid ticket selection");
         }
