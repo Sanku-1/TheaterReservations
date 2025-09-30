@@ -17,9 +17,9 @@ public class TheaterReservations {
         LocalDate movieDate = LocalDate.parse(dateInput, dateFormatter);
 
         if (ticketInput > 1) {
-            System.out.println(ticketInput + " movie tickets reserved under " + nameInput + " on " + movieDate);
+            System.out.println(ticketInput + " movie tickets reserved under " + nameInput + " for " + movieDate);
         } else if (ticketInput == 1) {
-            System.out.println(ticketInput + " movie ticket reserved under " + nameInput + " on " + movieDate);
+            System.out.println(ticketInput + " movie ticket reserved under " + nameInput + " for " + movieDate);
         } else {
             System.out.println("Invalid ticket selection");
         }
