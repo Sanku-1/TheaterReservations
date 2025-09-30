@@ -15,6 +15,13 @@ public class TheaterReservations {
         int ticketInput = reservationScanner.nextInt();
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate movieDate = LocalDate.parse(dateInput, dateFormatter);
-        System.out.println(ticketInput + " movie ticket(s) reserved for " + nameInput + " on " + movieDate);
+
+        if (ticketInput > 1) {
+            System.out.println(ticketInput + " movie tickets reserved under " + nameInput + " on " + movieDate);
+        } else if (ticketInput == 1) {
+            System.out.println(ticketInput + " movie ticket reserved under " + nameInput + " on " + movieDate);
+        } else {
+            System.out.println("Invalid ticket selection");
+        }
     }
 }
